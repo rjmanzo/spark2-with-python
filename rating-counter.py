@@ -7,8 +7,8 @@ conf = SparkConf().setMaster("local").setAppName("RatingHistogram")
 sc = SparkContext(conf = conf)
 
 # Read the lines from the archive
-lines = sc.textFile("../datasets/ml-100k/u.data")
-ratings = lines.map(lambda x: x.plit()[2])
+lines = sc.textFile("c:/spark2-with-python/datasets/ml-100k/u.data")
+ratings = lines.map(lambda x: x.split()[2])
 result = ratings.countByValue()
 
 sortedResults = collections.OrderedDict(sorted(result.items()))
