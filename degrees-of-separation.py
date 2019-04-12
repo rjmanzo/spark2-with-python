@@ -30,7 +30,7 @@ def convertToBFS(line):
 
 
 def createStartingRdd():
-    inputFile = sc.textFile("file:///sparkcourse/marvel-graph.txt")
+    inputFile = sc.textFile("c:/spark2-with-python/datasets/marvel-graph.txt")
     return inputFile.map(convertToBFS)
 
 def bfsMap(node):
